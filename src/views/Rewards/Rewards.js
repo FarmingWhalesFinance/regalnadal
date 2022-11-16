@@ -31,24 +31,12 @@ import { getServerUrl } from "src/lib";
 
 const PersonalHeader = () => (
   <div className="Page-title-section mt-0">
-    <div className="Page-title">Trader Rewards</div>
-    <div className="Page-description">
-      Be in the top 5% of traders to earn weekly rewards.
-      <br /> Read the Terms of Use{" "}
-      <a href="https://mycelium.xyz/rewards-terms-of-use" target="_blank" rel="noopener noreferrer">
-        here
-      </a>
-      .
-    </div>
+    <div className="Page-title">Trader Rewards || Coming Soon</div>
+    <div className="Page-description">Be in the top 8% of traders to earn weekly rewards.</div>
   </div>
 );
 
-const LeaderboardHeader = () => (
-  <div className="Page-title-section mt-0">
-    <div className="Page-title">Rewards Leaderboard</div>
-    <div className="Page-description">User rankings by volume.</div>
-  </div>
-);
+const LeaderboardHeader = () => <div className="Page-title-section mt-0"></div>;
 
 export default function Rewards(props) {
   const { connectWallet, trackPageWithTraits, trackAction, analytics, setPendingTxns, infoTokens } = props;
@@ -341,52 +329,6 @@ export default function Rewards(props) {
             Leaderboard: <LeaderboardHeader />,
           }[currentView]
         }
-        <ViewSwitch switchView={switchView} currentView={currentView} views={["Personal", "Leaderboard"]}>
-          {currentView === "Leaderboard" && !!allRoundsRewardsData ? (
-            <RoundDropdown
-              allRoundsRewardsData={allRoundsRewardsData}
-              setSelectedRound={setSelectedRound}
-              rewardsMessage={rewardsMessage}
-            />
-          ) : null}
-        </ViewSwitch>
-        <TraderRewards
-          active={active}
-          account={account}
-          ensName={ensName}
-          userData={userData}
-          totalRewardAmountUsd={totalRewardAmountUsd}
-          unclaimedRewardsUsd={unclaimedRewardsUsd}
-          rewardsMessage={rewardsMessage}
-          allRoundsRewardsData={allRoundsRewardsData}
-          setSelectedRound={setSelectedRound}
-          connectWallet={connectWallet}
-          userRoundData={userRoundData}
-          currentView={currentView}
-          trackAction={trackAction}
-          nextRewards={nextRewards}
-          latestRound={isLatestRound}
-          handleClaim={handleClaim}
-          claimDelay={claimDelay}
-          isClaiming={isClaiming}
-          hasClaimed={hasClaimedRound}
-        />
-        <Leaderboard
-          roundData={roundData}
-          middleRow={middleRow}
-          userRoundData={userRoundData}
-          userAccount={account}
-          ensName={ensName}
-          currentView={currentView}
-          selectedRound={selectedRound}
-          connectWallet={connectWallet}
-          trackAction={trackAction}
-          handleClaim={handleClaim}
-          claimDelay={claimDelay}
-          latestRound={isLatestRound}
-          isClaiming={isClaiming}
-          hasClaimed={hasClaimedRound}
-        />
       </Styles.StyledRewardsPage>
     </>
   );

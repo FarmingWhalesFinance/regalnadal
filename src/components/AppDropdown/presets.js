@@ -7,26 +7,7 @@ import { ReactComponent as Discord } from "../../img/nav/discord.svg";
 import { ReactComponent as Medium } from "../../img/nav/medium.svg";
 import * as Links from "../../config/links";
 
-export const linkRowContent = [
-  {
-    url: Links.pools,
-    title: "Perpetual Pools",
-    icon: Pools,
-    width: 126,
-  },
-  {
-    url: Links.staking,
-    title: "Staking",
-    icon: Staking,
-    width: 105,
-  },
-  {
-    url: Links.migration,
-    title: "Token Migration",
-    icon: TokenMigration,
-    width: 140,
-  },
-];
+export const linkRowContent = [];
 
 export const socialLinks = [
   {

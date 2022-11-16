@@ -90,12 +90,12 @@ export default function ExchangeAdvancedTVChart(props) {
       timeframe: TIMEFRAME[period],
       overrides: {
         "paneProperties.backgroundType": "solid",
-        "paneProperties.background": "#000a00",
+        "paneProperties.background": "#000000",
         "scalesProperties.lineColor": "rgba(42, 46, 57, 0.14)",
         "scalesProperties.textColor": "#fff",
-        "scalesProperties.backgroundColor": "#000a00",
-        "paneProperties.backgroundGradientStartColor": "#000a00",
-        "paneProperties.backgroundGradientEndColor": "#000a00",
+        "scalesProperties.backgroundColor": "#000000",
+        "paneProperties.backgroundGradientStartColor": "#000000",
+        "paneProperties.backgroundGradientEndColor": "#000000",
         "paneProperties.legendProperties.showStudyArguments": false,
         "paneProperties.legendProperties.showStudyTitles": false,
         "paneProperties.legendProperties.showStudyValues": false,
@@ -126,10 +126,10 @@ export default function ExchangeAdvancedTVChart(props) {
         "mainSeriesProperties.baselineStyle.bottomLineColor": DEFAULT_COLOURS.down,
       },
       loading_screen: {
-        backgroundColor: "#000a00 !important",
-        foregroundColor: "#000a00 !important",
+        backgroundColor: "#000000 !important",
+        foregroundColor: "#000000 !important",
       },
-      toolbar_bg: "#000a00",
+      toolbar_bg: "#000000",
       custom_css_url: "/AdvancedTVChart.css",
     };
     try {
@@ -222,7 +222,7 @@ export default function ExchangeAdvancedTVChart(props) {
             className="mx-auto h-20 w-20"
           >
             <path
-              fill="#098200"
+              fill="#bc1dce"
               d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"
             >
               <animateTransform

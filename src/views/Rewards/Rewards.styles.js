@@ -194,7 +194,7 @@ export const RewardsTable = styled.table`
     border-bottom: 0;
   }
   tbody tr.highlight-current {
-    background: linear-gradient(111.31deg, #003000 23.74%, rgba(0, 48, 0, 0) 99.29%);
+    background: linear-gradient(111.31deg, #000000 23.74%, rgba(0, 48, 0, 0) 99.29%);
     border: 1px solid var(--action-active);
   }
 `;
@@ -270,7 +270,7 @@ export const TopFiveRowCell = styled(TableCell)`
   font-weight: bold;
   text-align: center;
   height: 40px;
-  background: linear-gradient(180deg, #098200 0%, rgba(9, 130, 0, 0) 100%);
+  background: linear-gradient(180deg, #bc1dce 0%, rgba(9, 130, 0, 0) 100%);
 `;
 
 export const RankCell = styled(TableCell)`

@@ -18,7 +18,7 @@ export const DropdownButtonBackground = styled.span`
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(241.3deg, #098200 -4.53%, rgba(9, 130, 0, 0.6) 88.49%);
+  background: rgba(240, 55, 181, 1);
   opacity: 0;
   transition: opacity 0.3s ease;
 `;
@@ -27,6 +27,7 @@ export const DropdownButton = styled.button(
   (props) => `
   position: relative;
   height: 36px;
+  width: 
   padding: 0 8px;
   display: flex;
   align-items: center;
@@ -37,19 +38,19 @@ export const DropdownButton = styled.button(
   background-color: transparent;
   color: white;
   margin-left: 16px;
-  border: 1px solid var(--action-active);
-  background: linear-gradient(83.12deg, rgba(9, 130, 0, 0.5) -208.54%, rgba(9, 130, 0, 0) 159.09%), rgba(0, 10, 0, 0.6);
+  border: 0.6px solid var(--action-active);
+  background: rgba(0, 0, 0, 1)
   &:hover {
     color: white;
   }
   &:hover ${DropdownButtonBackground} {
-    opacity: 1;
+    opacity: 0;
   }
   ${
     props.dropdownOpen &&
     `
     ${DropdownButtonBackground} {
-      opacity: 1;
+      opacity: 0;
     }
   `
   }
@@ -112,8 +113,7 @@ export const DropdownContent = styled.div(
   width: 280px;
   border-radius: 4px;
   border: 1px solid var(--action-active);
-  background: linear-gradient(83.12deg, rgba(9, 130, 0, 0.5) -208.54%, rgba(9, 130, 0, 0) 159.09%),
-    rgba(0, 10, 0, 0.9);
+  background: rgba(240, 55, 181, 1);
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: ${props.dropdownOpen ? "translateY(0)" : "translateY(2px)"};
   opacity: ${props.dropdownOpen ? 1 : 0};
@@ -176,5 +176,5 @@ export const ItemHoverBackground = styled.div`
   transform: translateX(256px);
   opacity: 0;
   transition: all 0.3s ease;
-  background: linear-gradient(269.53deg, #098200 -35.12%, rgba(9, 130, 0, 0) 65.48%);
+  background: rgb(0, 0, 0);
 `;

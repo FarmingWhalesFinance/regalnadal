@@ -32,7 +32,7 @@ import { ReactComponent as MycStakingIcon } from "../../../img/nav/myc-staking.s
 // import { ReactComponent as LeaderboardIcon } from "../../../img/nav/trading-leaderboard.svg";
 import { ReactComponent as AnalyticsIcon } from "../../../img/nav/analytics.svg";
 import { ReactComponent as DocsIcon } from "../../../img/nav/docs.svg";
-import { ReactComponent as GithubIcon } from "../../../img/nav/github.svg";
+import { ReactComponent as Medium } from "../../../img/nav/medium.svg";
 import { ReactComponent as TwitterIcon } from "../../../img/nav/twitter.svg";
 import { ReactComponent as DiscordIcon } from "../../../img/nav/discord.svg";
 import { ReactComponent as PullTabSvg } from "../../../img/nav/pull-tab.svg";
@@ -42,16 +42,17 @@ import graphic from "../../../img/nav/event-graphic.png";
 import logoImg from "../../../img/logo_MYC.svg";
 
 const navTopLinks = [
+  /*{
+    name: "Home",
+    path: "https://www.amazon.es/?tag=admarketpl0c0-21&ref=pd_sl_2e30e27a83104081387822caeb2b70fe7f8264b8f9fa8287dff6b2bf&mfadid=adm",
+    icon: DashboardIcon,
+  },*/
   {
     name: "Trade",
     path: "/",
     icon: TradeIcon,
   },
-  {
-    name: "Dashboard",
-    path: "/dashboard",
-    icon: DashboardIcon,
-  },
+
   {
     name: "Earn",
     path: "/earn",
@@ -77,17 +78,17 @@ const navTopLinks = [
 const socialLinks = [
   {
     name: "Twitter",
-    path: "https://twitter.com/mycelium_xyz",
+    path: "https://twitter.com/arbitrex_io",
     icon: TwitterIcon,
   },
   {
-    name: "Github",
-    path: "https://github.com/mycelium-ethereum",
-    icon: GithubIcon,
+    name: "Medium",
+    path: "https://arbitrex.gitbook.io/arbitrex/arbitrex/about-arbitrex",
+    icon: Medium,
   },
   {
     name: "Discord",
-    path: "https://discord.gg/mycelium-xyz",
+    path: "https://discord.gg/XAYdmhEhxq",
     icon: DiscordIcon,
   },
 ];
@@ -97,7 +98,7 @@ export default function Sidebar({ sidebarVisible, setSidebarVisible }) {
 
   const setYear = () => {
     const year = new Date().getFullYear();
-    yearRef.current.innerHTML = `&copy; ${year} Mycelium`;
+    yearRef.current.innerHTML = `&copy; ${year} Arbitrex`;
   };
 
   useEffect(() => {
@@ -124,34 +125,13 @@ export default function Sidebar({ sidebarVisible, setSidebarVisible }) {
                 </NavLink>
               </MenuItem>
             ))}
-            <MenuItem>
-              <a href="https://stake.mycelium.xyz" target="_blank" rel="noopener noreferrer">
-                <MycStakingIcon /> <span>MYC Staking</span>
-              </a>
-            </MenuItem>
           </NavMenu>
           <div>
-            <NavMenu noPadding>
-              <MenuItem yellow>
-                <a href="https://analytics.mycelium.xyz" target="_blank" rel="noopener noreferrer">
-                  <AnalyticsIcon /> <span>Analytics</span>
-                </a>
-              </MenuItem>
-            </NavMenu>
-            <EventBox>
-              <EventHeader>WHAT'S HAPPENING THIS WEEK</EventHeader>
-              <EventContent>
-                <EventGraphic src={graphic} />
-                <EventTitle>Mycelium Referrals Competition</EventTitle>
-                <EventDescription>Win $20,000 USDC in prizes for sharing the trading spirit.</EventDescription>
-                <Link to="/referrals#leaderboard">
-                  <ViewNowButton>View Now</ViewNowButton>
-                </Link>
-              </EventContent>
-            </EventBox>
+            <NavMenu noPadding></NavMenu>
+
             <BottomMenuItem>
               <a
-                href="https://swaps.docs.mycelium.xyz/perpetual-swaps/mycelium-perpetual-swaps"
+                href="https://arbitrex.gitbook.io/arbitrex/arbitrex/about-arbitrex"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -165,14 +145,7 @@ export default function Sidebar({ sidebarVisible, setSidebarVisible }) {
                 </a>
               ))}
             </SocialLinksMenu>
-            <LegalMenu>
-              <a href="https://mycelium.xyz/privacy-policy" target="_blank" rel="noopener noreferrer">
-                Privacy Policy
-              </a>
-              <a href="https://mycelium.xyz/terms-of-use" target="_blank" rel="noopener noreferrer">
-                Terms of Use
-              </a>
-            </LegalMenu>
+
             <CopyrightYear ref={yearRef} />
           </div>
         </MenuContainer>

@@ -25,35 +25,7 @@ function ConsentModal({ hasConsented, setConsented }) {
     return () => clearTimeout(timer);
   }, [hasConsented]);
 
-  return (
-    <div className={`ConsentModal ${visible ? "visible" : ""}`}>
-      <button onClick={handleReject} className="ConsentModal-close-btn">
-        <img src={close} alt="Close" className="ConsentModal-close-btn-icon" />
-      </button>
-      <div className="ConsentModal-text">
-        <p>
-          <b>We use cookies on this site to enhance your user experience.</b>
-        </p>
-        <p>
-          By continuing to browse, you agree to the storing of cookies on your device to enhance your site experience
-          and for analytical purposes. By clicking ‘Accept’, you agree to the placement and use of cookies as described
-          in our{" "}
-          <a href="https://www.tracer.finance/privacy-policy/" rel="noopener noreferrer" target="_blank">
-            Privacy Policy
-          </a>
-          .
-        </p>
-        <div className="ConsentModal-buttons">
-          <button className="default-btn read-more" onClick={handleAccept}>
-            Accept
-          </button>
-          <button className="default-btn read-more" onClick={handleReject}>
-            Reject
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+  return <div className={`ConsentModal ${visible ? "invisible" : ""}`}></div>;
 }
 
 export default ConsentModal;

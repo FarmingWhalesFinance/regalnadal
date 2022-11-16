@@ -273,7 +273,7 @@ export default function DashboardV2() {
                   <br />
                   Get lower fees to{" "}
                   <Link to="/buy_mlp" target="_blank" rel="noopener noreferrer">
-                    buy MLP
+                    buy ARBX
                   </Link>{" "}
                   with {tokenInfo.symbol},&nbsp; and to{" "}
                   <Link to="/" target="_blank" rel="noopener noreferrer">
@@ -443,7 +443,8 @@ export default function DashboardV2() {
         <div className="section-title-block">
           <div className="section-title-content">
             <div className="Page-title">
-              Stats {(chainId === ARBITRUM || chainId === ARBITRUM_GOERLI) && (
+              Stats{" "}
+              {(chainId === ARBITRUM || chainId === ARBITRUM_GOERLI) && (
                 <img src={arbitrum24Icon} alt="arbitrum24Icon" />
               )}
             </div>
@@ -498,9 +499,7 @@ export default function DashboardV2() {
                 {feeHistory.length ? (
                   <div className="App-card-row">
                     <div className="label">Fees since {formatDate(feeHistory[0].to)}</div>
-                    <div>
-                      ${formatAmount(totalCurrentFees, USD_DECIMALS, 2, true)}
-                    </div>
+                    <div>${formatAmount(totalCurrentFees, USD_DECIMALS, 2, true)}</div>
                   </div>
                 ) : null}
               </div>

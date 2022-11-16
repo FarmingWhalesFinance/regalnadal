@@ -8,7 +8,7 @@ export const TradingCompBanner = styled.div(
   right: 0;
   top: 62px;
   height: 50px;
-  background: linear-gradient(112.34deg, #003100 17.72%, rgba(0, 49, 0, 0) 120.46%), #000a00;
+  background: rgba(128, 128, 128, 1);
   display: flex;
   align-items: center;
   justify-content: space-between;

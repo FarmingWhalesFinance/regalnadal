@@ -5,7 +5,7 @@ import chevronDown from "../../../img/chevron-down.svg";
 import { NavLink, useLocation } from "react-router-dom";
 
 const navLinks = [
-  {
+  /*{
     name: "Dashboard",
     path: "/dashboard",
   },
@@ -25,6 +25,7 @@ const navLinks = [
     name: "Referrals",
     path: "/referrals",
   },
+  */
 ];
 
 export default function LinkDropdown() {
@@ -76,7 +77,7 @@ export default function LinkDropdown() {
         </ListItem>
         <ListItem>
           <a
-            href="https://swaps.docs.mycelium.xyz/perpetual-swaps/mycelium-perpetual-swaps"
+            href="https://arbitrex.gitbook.io/arbitrex/arbitrex/about-arbitrex"
             target="_blank"
             rel="noopener noreferrer"
           >

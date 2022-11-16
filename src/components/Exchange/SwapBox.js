@@ -79,7 +79,7 @@ import longImg from "../../img/long.svg";
 import shortImg from "../../img/short.svg";
 import swapImg from "../../img/swap.svg";
 import { useUserReferralCode } from "../../Api/referrals";
-import {  getMaxLeverage , LeverageInput } from "./LeverageInput";
+import { LeverageInput } from "./LeverageInput";
 import { REFERRAL_CODE_KEY } from "../../config/localstorage";
 
 const SWAP_ICONS = {
@@ -800,9 +800,8 @@ export default function SwapBox(props) {
       return ["Min leverage: 1.1x"];
     }
 
-    const maxLeverage = getMaxLeverage(toTokenInfo.symbol);
-    if (leverage && leverage.gt(maxLeverage * BASIS_POINTS_DIVISOR)) {
-      return [`Max leverage: ${maxLeverage}x`];
+    if (leverage && leverage.gt(30.5 * BASIS_POINTS_DIVISOR)) {
+      return ["Max leverage: 30.5x"];
     }
 
     if (!isMarketOrder && entryMarkPrice && triggerPriceUsd) {
@@ -2124,7 +2123,7 @@ export default function SwapBox(props) {
         )}
         {(isLong || isShort) && (
           <div className="Exchange-leverage-box">
-            <LeverageInput value={leverageOption} onChange={setLeverageOption} max={getMaxLeverage(toToken.symbol)} min={1.1} step={0.01} />
+            <LeverageInput value={leverageOption} onChange={setLeverageOption} max={30.5} min={1.1} step={0.01} />
             {isShort && (
               <div className="Exchange-info-row">
                 <div className="Exchange-info-label">Profits In</div>
@@ -2377,30 +2376,7 @@ export default function SwapBox(props) {
             </div>
           </div>
           {renderAvailableLongLiquidity()}
-          {hasMaxAvailableShort && (
-            <div className="Exchange-info-row">
-              <div className="Exchange-info-label">Available Liquidity</div>
-              <div className="align-right">
-                <Tooltip
-                  handle={`${formatAmount(toTokenInfo.maxAvailableShort, USD_DECIMALS, 2, true)}`}
-                  position="right-bottom"
-                  renderContent={() => {
-                    return (
-                      <>
-                        Max {toTokenInfo.symbol} short capacity: $
-                        {formatAmount(toTokenInfo.maxGlobalShortSize, USD_DECIMALS, 2, true)}
-                        <br />
-                        <br />
-                        Current {toTokenInfo.symbol} shorts: $
-                        {formatAmount(toTokenInfo.globalShortSize, USD_DECIMALS, 2, true)}
-                        <br />
-                      </>
-                    );
-                  }}
-                ></Tooltip>
-              </div>
-            </div>
-          )}
+          {hasMaxAvailableShort && <div className="Exchange-info-row"></div>}
         </div>
       )}
       <div className="Exchange-swap-market-box App-box App-box-border">
@@ -2408,11 +2384,7 @@ export default function SwapBox(props) {
         <div className="App-card-divider"></div>
         <div className="Exchange-info-row">
           <div className="Exchange-info-label-button">
-            <a
-              href="https://swaps.docs.mycelium.xyz/quick-start-guide/2.-how-to-trade"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://arbitrex.gitbook.io/arbitrex/arbitrex/trading" target="_blank" rel="noopener noreferrer">
               Trading guide
             </a>
           </div>

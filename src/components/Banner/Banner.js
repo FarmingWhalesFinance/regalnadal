@@ -6,7 +6,7 @@ export const Banner = styled.div`
   width: 100%;
   left: 0;
   top: 0;
-  background-color: #e3b505;
+  background-color: rgb(0, 0, 0);
   color: #000;
   padding: 6px;
   /* border-radius: 8px; */

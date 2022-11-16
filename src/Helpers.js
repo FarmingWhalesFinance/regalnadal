@@ -20,7 +20,7 @@ import OrderBook from "./abis/OrderBook.json";
 import { getWhitelistedTokens, isValidToken } from "./data/Tokens";
 import ComingSoonTooltip from "./components/Tooltip/ComingSoon";
 import { isAddress } from "ethers/lib/utils";
-import { copyToClipboard } from './utils/common';
+import { copyToClipboard } from "./utils/common";
 import {
   REFERRAL_CODE_QUERY_PARAMS,
   CURRENT_PROVIDER_LOCALSTORAGE_KEY,
@@ -336,16 +336,10 @@ export const platformTokens = {
 
 export const networkOptions = [
   {
-    label: "Arbitrum",
-    value: ARBITRUM,
-    icon: "ic_arbitrum_24.svg",
-    color: "#264f79",
-  },
-  {
     label: "Testnet",
     value: ARBITRUM_GOERLI,
     icon: "ic_arbitrum_24.svg",
-    color: "#264f79",
+    color: "#000000",
   },
 ];
 

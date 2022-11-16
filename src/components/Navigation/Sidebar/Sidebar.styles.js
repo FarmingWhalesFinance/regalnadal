@@ -6,7 +6,7 @@ export const SideMenu = styled.aside(
   font-family: "aileron", sans-serif;
   background: var(--background-primary);
   height: 100vh;
-  background: linear-gradient(83.12deg, rgba(9, 130, 0, 0.5) -208.54%, rgba(9, 130, 0, 0) 159.09%), rgba(0, 0, 0, 0.9);
+  background: rgb(0, 0, 0);
   border-right: 1px solid var(--action-active);
   overflow: hidden;
   transition: width 0.3s ease, opacity 0.3s ease;
@@ -137,7 +137,7 @@ export const MenuItem = styled.li(
       top: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(244.65deg, #098200 -3.32%, rgba(9, 130, 0, 0) 128.23%);
+      background: rgb(0, 0, 0);
       opacity: 0;
       transition: opacity 0.3s ease;
     }
@@ -253,7 +253,7 @@ export const EventHeader = styled.div`
 
 export const EventContent = styled.div`
   padding: 16px 8px 8px;
-  background: linear-gradient(0deg, #003000, #003000), linear-gradient(0deg, rgba(0, 49, 0, 0.6), rgba(0, 49, 0, 0.6));
+  background: linear-gradient(0deg, #000000, #000000), rgb(0, 0, 0);
   > a {
     text-decoration: none;
   }

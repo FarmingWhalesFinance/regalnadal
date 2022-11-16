@@ -236,7 +236,7 @@ function AppHeaderLinks({ small, openSettings, clickCloseIcon, trackAction }) {
       </div>
       <div className="App-header-link-container">
         <a
-          href="https://swaps.docs.mycelium.xyz/perpetual-swaps/mycelium-perpetual-swaps"
+          href="https://arbitrex.gitbook.io/arbitrex/arbitrex/about-arbitrex"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -797,7 +797,7 @@ function FullApp() {
                     onClick={() => {
                       trackAction &&
                         trackAction("Button clicked", {
-                          buttonName: "Mycelium Nav Logo",
+                          buttonName: "Arbitrex Nav Logo",
                         });
                     }}
                   >

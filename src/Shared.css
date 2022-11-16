@@ -9,7 +9,7 @@ body,
   font-family: "Inter";
   letter-spacing: 0.5px;
   font-size: 15.5px;
-  background-color: var(--background-primary);
+  background-color: rgb(0, 0, 0);
 }
 
 * {
@@ -54,33 +54,31 @@ body,
   --short-active: #dd463a;
   --long-active: #3ee028;
 
-  --darkest-green: #001100;
+  --darkest-green: #000000;
 
-  --background-primary: #000a00;
+  --background-primary: #000000;
   --background-secondary: rgba(0, 9, 0, 0.2);
-  --background-navigation: linear-gradient(83.12deg, rgba(9, 130, 0, 0.5) -208.54%, rgba(9, 130, 0, 0) 159.09%);
-  --background-gradient: linear-gradient(83.12deg, rgba(9, 130, 0, 0.6) -208.54%, rgba(9, 130, 0, 0) 159.09%),
-    rgba(0, 10, 0, 0.9);
-  --background-gradient-solid: linear-gradient(83.12deg, rgba(9, 130, 0, 1) -208.54%, rgba(9, 130, 0, 0) 159.09%),
-    rgba(0, 10, 0, 1);
+  --background-navigation: rgb(0, 0, 0);
+  --background-gradient: rgb(0, 0, 0);
+  --background-gradient-solid: rgb(196, 8, 189);
 
-  --border-navigation: #098200;
+  --border-navigation: #930ea2;
 
-  --action-active: #098200;
-  --action-inactive: #093806;
-  --action-hover: #003000;
-  --action-stroke: #003000;
-  --action-shadow: 0 0 4px 6px rgba(9, 130, 0, 0.1);
-  --action-gradient: linear-gradient(267.64deg, rgba(0, 48, 0, 0.5) -84.72%, rgba(0, 48, 0, 0) 144.55%);
+  --action-active: #bc1dce;
+  --action-inactive: #000000;
+  --action-hover: #000000;
+  --action-stroke: #000000;
+  --action-shadow: rgb(0, 0, 0);
+  --action-gradient: rgb(0, 0, 0);
 
-  --cell-gradient: linear-gradient(180deg, rgba(5, 67, 1, 0.2) 0%, rgba(5, 67, 1, 0) 65.01%);
-  --cell-hover: #03100e;
-  --cell-stroke: #003000;
-  --cell-highlight: #098200;
-  --cell-unavailable: rgba(49, 87, 136, 0.05);
-  --cell-unavailable-stroke: rgba(49, 87, 136, 0.2);
+  --cell-gradient: rgb(0, 0, 0);
+  --cell-hover: #000000;
+  --cell-stroke: #000000;
+  --cell-highlight: #bc1dce;
+  --cell-unavailable: rgb(0, 0, 0);
+  --cell-unavailable-stroke: rgb(0, 0, 0);
 
-  --tooltip-fill: #03100e;
+  --tooltip-fill: #000000;
   --tooltip-shadow: 0px 0px 7px rgba(39, 62, 89, 0.53);
 
   --text-primary: #fff;
@@ -155,7 +153,7 @@ td {
 }
 
 .border {
-  border: 1px solid rgba(163, 165, 196, 0.2);
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .align-right {
@@ -216,7 +214,7 @@ a.plain {
 }
 
 .checkbox:checked:before {
-  background-color: green;
+  background-color: rgb(196, 7, 158);
 }
 
 .default-btn {

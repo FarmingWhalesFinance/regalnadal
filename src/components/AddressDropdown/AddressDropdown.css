@@ -22,7 +22,7 @@
 }
 
 .App-header-user-address:hover {
-  background: #808aff14;
+  background: #00000000;
 }
 
 .menu-items {
@@ -33,7 +33,7 @@
   width: 100%;
   transform-origin: top right;
   border-radius: 4px;
-  background: var(--background-gradient);
+  background: rgb(0, 0, 0);;
   border: 1px solid var(--cell-highlight);
   list-style: none;
   cursor: pointer;

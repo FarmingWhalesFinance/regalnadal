@@ -51,8 +51,8 @@ export function isRecentReferralCodeNotExpired(referralCodeInfo) {
 
 const RebatesHeader = () => (
   <div className="Page-title-section mt-0">
-    <div className="Page-title">Trader Referrals</div>
-    <div className="Page-description">Claim trading fee rebates here.</div>
+    <div className="Page-title">Referral Program || Coming Soon</div>
+    <div className="Page-description">You will be able to read our referral program on our gitbook</div>
   </div>
 );
 
@@ -379,80 +379,6 @@ export default function Referral(props) {
             [LEADERBOARD]: <LeaderboardHeader />,
           }[currentView]
         }
-        <ViewSwitchTriple
-          switchView={switchView}
-          currentView={currentView}
-          views={[REBATES, COMMISSIONS, LEADERBOARD]}
-        />
-        <Styles.PersonalReferralContainer>
-          {currentView !== LEADERBOARD && (
-            <AccountBanner
-              active={active}
-              account={account}
-              ensName={ensName}
-              currentView={currentView}
-              // Rebates
-              tradersTier={tradersTier}
-              tradersRebates={tradersRebates}
-              tradersVolume={tradersVolume}
-              referralCodeInString={referralCodeInString}
-              // Commissions
-              referrerTier={referrerTier}
-              referrerRebates={referrerRebates}
-              referrerVolume={referrerVolume}
-            />
-          )}
-          {currentView === REBATES && (
-            <TraderRebateStats
-              active={active}
-              connectWallet={connectWallet}
-              trackAction={trackAction}
-              referralCodeInString={referralCodeInString}
-              handleSetIsEnterCodeModalVisible={handleSetIsEnterCodeModalVisible}
-              tradersTier={tradersTier}
-            />
-          )}
-          {currentView === COMMISSIONS && (
-            <ReferralCodesTable
-              chainId={chainId}
-              active={active}
-              connectWallet={connectWallet}
-              trackAction={trackAction}
-              setIsCreateCodeModalVisible={setIsCreateCodeModalVisible}
-              hasCreatedCode={hasCreatedCode}
-              finalReferrerTotalStats={finalReferrerTotalStats}
-            />
-          )}
-          {currentView === LEADERBOARD && (
-            <ReferralLeaderboard
-              connectWallet={connectWallet}
-              userRoundData={userRoundData}
-              currentRoundData={currentRewardRound?.rewards}
-              referralCodeInString={referralCodeInString}
-              allRoundsRewardsData={allRoundsRewardsData}
-              allUsersRoundData={allUsersRoundData}
-              selectedRound={selectedRound}
-              setSelectedRound={setSelectedRound}
-              rewardsMessage={rewardsMessage}
-              trackAction={trackAction}
-            />
-          )}
-          {userRoundData && /* disable for now */ false && (
-            <ReferralRewards
-              active={active}
-              connectWallet={connectWallet}
-              trackAction={trackAction}
-              userRoundData={userRoundData}
-              allRoundsRewardsData={allRoundsRewardsData}
-              latestRound={isLatestRound}
-              timeTillRewards={timeTillRewards}
-              rewardsMessage={rewardsMessage}
-              setSelectedRound={setSelectedRound}
-              hasClaimed={hasClaimedRound}
-              handleClaim={handleClaim}
-            />
-          )}
-        </Styles.PersonalReferralContainer>
       </Styles.StyledReferralPage>
     </>
   );

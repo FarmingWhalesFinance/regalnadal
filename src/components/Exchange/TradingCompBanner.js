@@ -4,7 +4,7 @@ import cx from "classnames";
 import Countdown from "react-countdown";
 import * as Styles from "./TradingCompBanner.styles";
 
-const COMP_END_TS = 1668556800000; // 2022-11-16 10:00:00 AEST
+const COMP_END_TS = 1668978000000; // 2022-11-16 10:00:00 AEST
 
 export default function TradingCompBanner() {
   const [showBanner, setShowBanner] = useState(true);
@@ -49,15 +49,12 @@ export default function TradingCompBanner() {
       <div />
       <Styles.TextContainer>
         <Styles.FlexContainer>
-          <Styles.LiveIcon /> <Styles.GreenText>Live</Styles.GreenText>
+          <Styles.LiveIcon /> <Styles.GreenText>Disabled</Styles.GreenText>
         </Styles.FlexContainer>
-        <Styles.BannerTitle>Referrals Competition</Styles.BannerTitle>
+        <Styles.BannerTitle>Testnet Beta</Styles.BannerTitle>
         <span>
           Time left: <Countdown date={COMP_END_TS} renderer={countdownRenderer} intervalDelay={0} precision={3} />
         </span>
-        <Link to="/referrals#commissions">
-          <Styles.GenerateButton>Generate & share your code today to play.</Styles.GenerateButton>
-        </Link>
       </Styles.TextContainer>
       <Styles.CloseButton onClick={onClose} />
     </Styles.TradingCompBanner>

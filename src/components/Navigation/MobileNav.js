@@ -29,10 +29,7 @@ const navLinks = [
     name: "Trade",
     path: "/",
   },
-  {
-    name: "Dashboard",
-    path: "/dashboard",
-  },
+
   {
     name: "Earn",
     path: "/earn",
@@ -171,7 +168,7 @@ export default function AppHeaderLinks({
           </AppHeaderLinkContainer>
           <AppHeaderLinkContainer>
             <a
-              href="https://swaps.docs.mycelium.xyz/perpetual-swaps/mycelium-perpetual-swaps"
+              href="https://arbitrex.gitbook.io/arbitrex/arbitrex/about-arbitrex"
               target="_blank"
               rel="noopener noreferrer"
               onClick={clickCloseIcon}

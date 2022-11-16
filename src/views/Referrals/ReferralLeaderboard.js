@@ -10,7 +10,6 @@ import { decodeReferralCode } from "../../Api/referrals";
 import { competitionPodiumContent } from "./presets";
 import { numberToOrdinal } from "../../utils/common";
 
-
 const TABLE_HEADINGS = [
   "Rank",
   "Referral Code",
@@ -50,7 +49,7 @@ export default function ReferralLeaderboard(props) {
     }
   });
 
-  const modifiedRewardsMessage = [COMPETITION_ROUND].includes(selectedRound)
+  const modifiedRewardsMessage = [COMPETITION_ROUND, "latest"].includes(selectedRound)
     ? "Competition Round"
     : rewardsMessage;
 

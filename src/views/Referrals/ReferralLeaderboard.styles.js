@@ -185,7 +185,7 @@ export const TableRow = styled.tr`
     z-index: 1;
   }
   &.highlight {
-    background-image: linear-gradient(111.31deg, #003000 23.74%, rgba(0, 48, 0, 0) 99.29%);
+    background-image: linear-gradient(111.31deg, #000000 23.74%, rgba(0, 48, 0, 0) 99.29%);
     border-top: 1px solid var(--action-active) !important;
   }
   &.no-border {
